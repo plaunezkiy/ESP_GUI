@@ -1,0 +1,33 @@
+import requests
+
+url = 'https://raw.githubusercontent.com/frk1/hazedumper/master/csgo.json'
+response = requests.get(url).json()
+m_hActiveWeapon = int(response["netvars"]["m_hActiveWeapon"])
+dwPlayerResource = int(response["signatures"]["dwPlayerResource"])
+dwLocalPlayer = int(response["signatures"]["dwLocalPlayer"])  #
+dwForceAttack = int(response["signatures"]["dwForceAttack"])  #
+m_vecOrigin = int(response["netvars"]["m_vecOrigin"])  #
+m_iHealth = int(response["netvars"]["m_iHealth"])  #
+m_vecViewOffset = int(response["netvars"]["m_vecViewOffset"])  #
+m_bGunGameImmunity = int(response["netvars"]["m_bGunGameImmunity"])  #
+m_vecVelocity = int(response["netvars"]["m_vecVelocity"])  #
+m_iCrosshairId = int(response["netvars"]["m_iCrosshairId"])  #
+m_dwBoneMatrix = int(response["netvars"]["m_dwBoneMatrix"])
+dwClientState_ViewAngles = int(response["signatures"]["dwClientState_ViewAngles"])  #
+m_iShotsFired = int(response["netvars"]["m_iShotsFired"])
+dwClientState_GetLocalPlayer = int(response["signatures"]["dwClientState_GetLocalPlayer"])  #
+m_aimPunchAngle = int(response["netvars"]["m_aimPunchAngle"])
+dwClientState = int(response["signatures"]["dwClientState"])
+dwRadarBase = int(response["signatures"]["dwRadarBase"])
+m_flFlashMaxAlpha = int(response["netvars"]["m_flFlashMaxAlpha"])
+dwGlowObjectManager = int(response["signatures"]["dwGlowObjectManager"])  #
+m_iTeamNum = int(response["netvars"]["m_iTeamNum"])
+m_iCompetitiveRanking = int(response["netvars"]["m_iCompetitiveRanking"])
+m_iCompetitiveWins = int(response["netvars"]["m_iCompetitiveWins"])
+dwEntityList = int(response["signatures"]["dwEntityList"])
+m_fFlags = int(response["netvars"]["m_fFlags"])
+m_iGlowIndex = int(response["netvars"]["m_iGlowIndex"])
+dwForceJump = int(response["signatures"]["dwForceJump"])  #
+m_bSpottedByMask = int(response["netvars"]["m_bSpottedByMask"])
+m_bSpotted = int(response["netvars"]["m_bSpotted"])
+m_szCustomName = int(response["netvars"]["m_szCustomName"])

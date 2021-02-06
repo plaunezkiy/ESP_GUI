@@ -1,0 +1,82 @@
+<NeatLabel@MDLabel>:
+    halign: "center"
+    text_color: 0, 0, 1, 1
+
+<SectionLayout@BoxLayout>:
+    orientation: "horizontal"
+    size_hint_y: 0.3
+
+<Button@Button>:
+    text: "OFF"
+
+BoxLayout:
+    id: layout
+    orientation: "vertical"
+    SectionLayout:
+        NeatLabel:
+            text: "Wall Hack"
+        Button:
+            on_release: app.por_thread(self, "wh")
+    SectionLayout:
+        NeatLabel:
+            text: "Bunny Hop"
+        Button:
+            on_release: app.por_thread(self, "bunny")
+    SectionLayout:
+        NeatLabel:
+            text: "Radar"
+        Button:
+            on_release: app.por_thread(self, "radar")
+    SectionLayout:
+        NeatLabel:
+            text: "No Flash"
+        Button:
+            on_release: app.por_thread(self, "no_flash")
+    SectionLayout:
+        NeatLabel:
+            text: "No Recoil"
+        Button:
+            on_release: app.por_thread(self, "no_recoil")
+    SectionLayout:
+        NeatLabel:
+            text: "Trigger"
+        Button:
+            on_release: app.por_thread(self, "trigger")
+
+
+    #aim section
+    SectionLayout:
+        NeatLabel:
+            text: "Aim Bot"
+        Button:
+            #on_release: app.eod_aim_controls(self)
+            #on_release: app.por_thread(self, "aimbot", "get")
+    SectionLayout:
+        id: aim_controls
+        NeatLabel:
+            size_hint_x: 0.4
+            text: "Smoothness: " + str(smoothness.value)
+        Slider:
+            id: smoothness
+            step: 1
+            min: 1
+            max: 2000
+            #disabled: True
+        NeatLabel:
+            size_hint_x: 0.3
+            text: "FOV: " + str(fov.value)
+        Slider:
+            id: fov
+            step: 1
+            min: 1
+            max: 26
+            #disabled: True
+        NeatLabel:
+            text: "AimBone:"
+        Button:
+            id: aimbone
+            text: "Head"
+            #disabled: True
+
+
+    Widget
